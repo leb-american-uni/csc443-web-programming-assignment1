@@ -3,71 +3,89 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
         <title>Thomas's Personal Homepage</title>
     </head>
     <body>
-        <header>
+        <header class="container">
             <h1>Welcome to My Personal Homepage</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <nav>
-            <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>   
-        </nav>
-
         <main>
-            <section>
+            <section class="container">
                 <article>
                     <h2>About Me</h2>
                     <p>Hello! I'm Thomas,this is my personal website for assignment1.</p>
                 </article>
             </section>
-            <section>
-                <fieldset>
-                    <legend>Login</legend>
-                    <label for="username">Username:</label>
-                    <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        required
-                        aria-required="true"
-                        aria-describedby="username-desc"
-                    />
-                    <label for="password">Password:</label>
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        required
-                        aria-required="true"
-                        aria-describedby="password-desc"
-                    />
-                    <label for="gender">Gender:</label>
-                    <select name="gender" id="gender" required aria-required="true" aria-describedby="gender-desc">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <fieldset id="agerange">
-                        <legend>Age Range:</legend>
-                        <input type="radio" name="age" value="under18" id="under18" required />
-                        <label for="under18">Under 18</label>
-                        <input type="radio" name="age" value="18-30" id="18-30" required />
-                        <label for="18-30">18-30</label>
-                        <input type="radio" name="age" value="31-50" id="31-50" required />
-                        <label for="31-50">31-50</label>
-                        <input type="radio" name="age" value="51plus" id="51plus" required />
-                        <label for="51plus">51+</label>
+
+            <section class="container">
+                <h2>Login</h2>
+                <form>
+                    <fieldset>
+                        <legend>User Information</legend>
+                        <div>
+                            <label for="username">Username:</label>
+                            <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                required
+                                aria-required="true"
+                                aria-describedby="username-desc"
+                            />
+                        </div>
+                        <div>
+                            <label for="password">Password:</label>
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                required
+                                aria-required="true"
+                                aria-describedby="password-desc"
+                            />
+                        </div>
+                        <div>
+                            <label for="gender">Gender:</label>
+                            <select name="gender" id="gender" required aria-required="true" aria-describedby="gender-desc">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <fieldset id="agerange">
+                            <legend>Age Range:</legend>
+                            <div>
+                                <input type="radio" name="age" value="under18" id="under18" required />
+                                <label for="under18">Under 18</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="age" value="18-30" id="age18-30" required />
+                                <label for="age18-30">18-30</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="age" value="31-50" id="age31-50" required />
+                                <label for="age31-50">31-50</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="age" value="51plus" id="age51plus" required />
+                                <label for="age51plus">51+</label>
+                            </div>
+                        </fieldset>
+                        <button type="submit">Submit All</button>
                     </fieldset>
-                    <button type="submit">Submit All</button>
-                </fieldset>
+                </form>
             </section>
         </main>
         
-        <footer>
+        <footer class="container">
             <p>&copy; 2025 Thomas's Personal Homepage</p>
         </footer>
     </body>
